@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 import { LoginDto } from "./dto/login.dto";
 import { PagePath } from "@/app/enums/page-path.enum";
 import { RoleCode } from "@/app/enums/role.enum";
-import "@/app/style/login.css";
+import "../../../style/Login.css";
 
 const { TabPane } = Tabs;
 
