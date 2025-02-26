@@ -8,7 +8,7 @@ import { Dayjs } from "dayjs";
 import dayjs from "dayjs";
 import { useBookedSlot } from "../hooks/useGetBookedSlot";
 import { useTherapists } from "../../therapists/hooks/useGetTherapist";
-import { useBookingss } from "@/app/(Page)/(Admin && Staff && Therapist)/booking-management/hooks/useGetBooking";
+import { useBookingss } from "@/app/(Page)/(admin-staff-therapist)/booking-management/hooks/useGetBooking";
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 
