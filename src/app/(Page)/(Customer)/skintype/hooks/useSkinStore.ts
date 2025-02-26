@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { SkinDto } from "../dto/Skin.dto";
+import { SkinDto } from "../dto/skin.dto";
 
 interface SkinStore {
   skins: SkinDto[];

@@ -1,10 +1,10 @@
 "use client";
 
-import { Card, Typography, Row, Col, Image, Divider, Spin } from "antd";
+import { Card, Row, Col, Image, Divider, Spin } from "antd";
 import { useParams } from "next/navigation";
 import { useTherapistById } from "../hooks/useGetTherapistId";
-
-const { Title, Text } = Typography;
+import Title from "antd/es/typography/Title";
+import Text from "antd/es/typography/Text";
 
 const SkinTherapistDetail = () => {
   const { skintherapistId } = useParams();
