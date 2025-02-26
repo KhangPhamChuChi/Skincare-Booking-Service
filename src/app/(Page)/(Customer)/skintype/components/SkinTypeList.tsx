@@ -1,8 +1,8 @@
 import { Card, Typography, Image, Button } from "antd";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const { Title, Paragraph } = Typography;
-import { PagePath } from "../../../enums/page-path.enum";
+import { PagePath } from "@/app/enums/page-path.enum";
 import "../../../style/SkinType.css";
 import { useSkinTypes } from "../hooks/useGetSkin";
 import { useSkinStore } from "../hooks/useSkinStore";
@@ -47,7 +47,7 @@ const SkinType = () => {
               {skinType.skintypeName}
             </Title>
             <Title level={4}>
-              “Da thường" là một làn da cân bằng. Các vùng chữ T (trán, cằm và
+              Da thường là một làn da cân bằng. Các vùng chữ T (trán, cằm và
               mũi) có thể là một chút dầu, nhưng nhìn chung độ dầu và độ ẩm cân
               bằng và da không quá nhờn hoặc quá khô.
             </Title>
@@ -324,7 +324,7 @@ const SkinType = () => {
           tra kiến thức và tìm ra loại da phù hợp với bạn nhé!
         </Title>
 
-        <Link to={PagePath.QUIZ}>
+        <Link href={PagePath.QUIZ}>
           <Button type="primary" size="large" className="quiz-button">
             Tới trang làm quiz
           </Button>

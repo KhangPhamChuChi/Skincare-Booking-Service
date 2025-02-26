@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+
 import { useEffect } from "react";
 import { Button, Form, Input, message } from "antd";
 import { useMutation } from "@tanstack/react-query";
 import useAuthStore from "../hooks/useAuthStore";
 import "../../../style/App.css";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { LoginDto } from "../dto/login.dto";
 import { PagePath } from "../../../../enums/page-path.enum";
 import type { GetProps } from "antd";
@@ -13,7 +16,7 @@ type OTPProps = GetProps<typeof Input.OTP>;
 const VerifyOTP = () => {
   const [form] = Form.useForm();
   const { login } = useAuthStore();
-  const navigate = useNavigate();
+  const router = useRouter();
   const onChange: OTPProps["onChange"] = (text) => {
     console.log("onChange:", text);
   };
@@ -35,7 +38,7 @@ const VerifyOTP = () => {
     mutationFn: login,
     onSuccess: (response) => {
       if (response.success) {
-        navigate(PagePath.HOME);
+        router.push(PagePath.HOME);
         message.success("Đăng nhập thành công");
       } else {
         message.error(response.message);
@@ -78,7 +81,7 @@ const VerifyOTP = () => {
             <Button
               className="login-btn"
               type="primary"
-              onClick={() => navigate(PagePath.VERIFY_OTP)}
+              onClick={() => router.push(PagePath.VERIFY_OTP)}
             >
               Xác thực OTP
             </Button>
