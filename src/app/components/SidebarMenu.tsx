@@ -49,7 +49,7 @@ const SidebarMenu = ({ children }: { children: React.ReactNode }) => {
 
   const handleMenu = (key: string) => {
     if (key === "account") {
-      router.push(PagePath.PROFILE);
+      router.push(PagePath.PROFILES);
     } else if (key === "logout") {
       handleLogout();
     }

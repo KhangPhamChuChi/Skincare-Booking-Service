@@ -21,6 +21,7 @@ export enum PagePath {
   COMPLETE_RESULT = "/complete-booking",
   ANY = "*",
   FORBIDDEN = "/403",
+  PROFILES = "/profiles"
   PROFILE = "/profile",
   BOOKING = "/booking-management",
   BOOKING_DETAIL = "/booking-management/:bookingId",
