@@ -1,16 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+"use client";
+
 import CustomLogoutIcon from "../../../components/icon/CustomLogoutIcon";
 import CustomPenIcon from "../../../components/icon/CustomPenIcon";
 import { UserOutlined } from "@ant-design/icons";
 import { useRef, useState } from "react";
-import { Button, Card, Flex, Image, Typography, Menu, Col } from "antd";
+import { Button, Card, Flex, Image, Menu, Col } from "antd";
 import useAuthStore from "../../(Authentication)/login/hooks/useAuthStore";
 import ProfileChangePassword from "../../(Admin && Staff && Therapist)/profiles/ProfileChangePassword";
 import ProfileInformation from "../../(Admin && Staff && Therapist)/profiles/ProfileInformation";
 import CustomPasswordIcon from "../../../components/icon/CustomPasswordIcon";
-
-const { Text, Title } = Typography;
+import Title from "antd/es/typography/Title";
+import Text from "antd/es/typography/Text";
 
 export default function Profile() {
   const { user, logout } = useAuthStore();

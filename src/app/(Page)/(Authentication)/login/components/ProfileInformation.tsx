@@ -1,7 +1,6 @@
 import useAuthStore from "../hooks/useAuthStore";
-import { Form, Typography } from "antd";
-
-const { Text } = Typography;
+import { Form } from "antd";
+import Text from "antd/es/typography/Text";
 
 export default function ProfileInformation() {
   const [form] = Form.useForm();
