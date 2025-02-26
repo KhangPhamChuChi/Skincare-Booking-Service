@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Spin, Descriptions, Breadcrumb, Tag, Typography, Input } from "antd";
@@ -6,9 +8,9 @@ import { useUserById } from "../hook/useGetUserId";
 const { Title } = Typography;
 
 const UserDetail = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
 
-  const { data: user, isLoading, isError } = useUserById(id || "");
+  const { data: user, isLoading, isError } = useUserById((id as string) || "");
 
   if (isLoading) {
     return <Spin size="large" />;
